@@ -17,7 +17,7 @@
 }
 
 main h1::before{
-    content: url('../img/detalhe.svg');
+    content: url('../img/detalhe-noblue.svg');
     width: 130px;
     height: 100px;
     top: -25px;

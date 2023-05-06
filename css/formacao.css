@@ -72,7 +72,7 @@
     display: block;
     width: 4px;
     height: 20px;
-    background: linear-gradient(#b6f829, #67dd0a);
+    background: linear-gradient(#C8DEB8, #71C89D);
     position: absolute;
     top: 5px;
     left: -24px;
@@ -107,11 +107,11 @@
 }
 
 .cursos h3::after{
-    background-image: url("../img/cursos.svg");
+    background: url("../img/cursos-noblue.svg") no-repeat center center;
 }
 
 .idiomas h3::after{
-    background-image: url("../img/idiomas.svg");
+    background: url("../img/idiomas-noblue.svg") no-repeat center center;
 }
 
 .formacao-extra li{
@@ -137,6 +137,7 @@
 
     .formacao-texto{
         font-size: 1.25rem;
+        max-width: max-content;
     }
 
     .formacao-extra h3::after{
