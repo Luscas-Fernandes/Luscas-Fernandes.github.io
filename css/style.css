@@ -442,6 +442,10 @@ main h1::before {
 .seta {
     font-size: 3rem !important;
 }
+
+.footer-contato{
+    margin-right: auto;
+}
 .footer-contato li {
     font-weight: 700;
     font-size: 2rem;
