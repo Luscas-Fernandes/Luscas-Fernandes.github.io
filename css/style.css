@@ -82,10 +82,14 @@ a:visited{
     margin-top: 4px;
     transition: .15s;
 }
-.header-menu a:hover::after{
+.header-menu li:hover a::after{
     width: 100%;
 }
 @media (max-width: 800px) {
+    .header-menu li:hover a::after{
+        width: 0;
+    }
+
     .header {
         flex-direction: column;
         gap: 30px;
@@ -94,10 +98,15 @@ a:visited{
     .header-menu a {
         background-color: #f5f5f5;
         border-radius: 0.25rem;
-        box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+        padding: .75rem 1rem;
+        box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
     }
     .header-menu a:hover {
         background-color: #e4e4e4;
+    }
+
+    .header-menu{
+        gap: 1.5rem;
     }
 }
 .main {
@@ -132,6 +141,11 @@ a:visited{
     /* color: #303030; */
 }
 
+.seta-tit{
+    color: #000 !important;
+    text-decoration: none !important;
+}
+
 #texto-tit:has(.chique:hover) .palavra:not(.chique:hover) {
     opacity: 15%;
 }
@@ -147,13 +161,8 @@ a:visited{
     align-items: center;
 }
 
-.seta-tit{
-    color: #000 !important;
-    font-size: 3.5rem !important;
-}
-
-#contato{
-
+.seta-linha{
+    justify-content: unset;
 }
 
 main h1::before {
@@ -172,13 +181,10 @@ main h1::before {
 }
 @media (max-width: 1350px) {
     .palavra {
-        font-size: 2.25rem;
-    }
-    .seta-tit {
-        font-size: 2.25rem !important;
+        font-size: 2.75rem;
     }
     .palavra a{
-        font-size: 2.25rem;
+        font-size: 2.75rem;
     }
     .linha{
         gap: 1rem;
@@ -186,32 +192,38 @@ main h1::before {
 }
 @media (max-width: 800px) {
     .main {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 60px;
+        margin: 0 3rem;
     }
     .palavra {
-        font-size: 2rem;
-    }
-    .seta-tit {
-        font-size: 2rem !important;
+        font-size: 2.25rem;
     }
     .palavra a{
-        font-size: 2rem;
+        font-size: 2.25rem;
+        text-decoration: underline;
     }
     .linha{
-        justify-content: unset;
+        /* justify-content: unset; */
         gap: .5rem;
     }
-}
-@media (max-width: 500px) {
-    .main {
-        grid-template-columns: 1fr;
+    .footer-contato{
+        margin: 0 auto;
     }
     .main img {
         display: none;
     }
-    .linha{
-        justify-content: spa;
+
+}
+@media (max-width: 600px) {
+    .main{
+        margin: 0 1rem;
+    }
+    .palavra{
+        font-size: 2.05rem;
+    }
+    .palavra a{
+        font-size: 2.05rem;
     }
 }
 .container .subtitulo {
@@ -309,15 +321,15 @@ main h1::before {
         transform: rotate(270deg);
     }
 }
-@media (max-width: 400px) {
-    .palavra {
-        font-size: 1.5rem;
+@media (max-width: 500px) {
+    .main{
+        margin: 0;
     }
-    .seta-tit {
-        font-size: 1.5rem !important;
+    .palavra {
+        font-size: 1.55rem;
     }
     .palavra a{
-        font-size: 1.5rem;
+        font-size: 1.55rem;
     }
     
     .projetos {
@@ -509,7 +521,5 @@ main h1::before {
     .footer-contato li {
         font-size: 1.5rem;
     }
-    .seta {
-        display: none !important;
-    }
+    
 }
