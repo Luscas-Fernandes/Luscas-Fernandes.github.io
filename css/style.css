@@ -170,9 +170,18 @@ main h1::before {
     font-size: 1.5rem;
     color: #525252;
 }
-@media (max-width: 1000px) {
-    .main h1 {
-        font-size: 3rem;
+@media (max-width: 1350px) {
+    .palavra {
+        font-size: 2.25rem;
+    }
+    .seta-tit {
+        font-size: 2.25rem !important;
+    }
+    .palavra a{
+        font-size: 2.25rem;
+    }
+    .linha{
+        gap: 1rem;
     }
 }
 @media (max-width: 800px) {
@@ -180,8 +189,18 @@ main h1::before {
         grid-template-columns: repeat(2, 1fr);
         gap: 60px;
     }
-    .main h1 {
+    .palavra {
         font-size: 2rem;
+    }
+    .seta-tit {
+        font-size: 2rem !important;
+    }
+    .palavra a{
+        font-size: 2rem;
+    }
+    .linha{
+        justify-content: unset;
+        gap: .5rem;
     }
 }
 @media (max-width: 500px) {
@@ -190,6 +209,9 @@ main h1::before {
     }
     .main img {
         display: none;
+    }
+    .linha{
+        justify-content: spa;
     }
 }
 .container .subtitulo {
@@ -288,6 +310,16 @@ main h1::before {
     }
 }
 @media (max-width: 400px) {
+    .palavra {
+        font-size: 1.5rem;
+    }
+    .seta-tit {
+        font-size: 1.5rem !important;
+    }
+    .palavra a{
+        font-size: 1.5rem;
+    }
+    
     .projetos {
         grid-template-columns: 1fr;
     }
